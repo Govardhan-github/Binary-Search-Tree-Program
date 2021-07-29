@@ -34,6 +34,22 @@ private MyBinayNode<k> addRecursively(MyBinayNode<k> root , k key) {
 	return root;//Return Root
 }
 	/*
+	 * Declaring get Size Method
+	 * Calling The getSizeRecursive Method
+	 */
+public int getSize(){
+	return this.getSizeRecursive(root);
+}
+	/*
+	 * Here Declaring The Get Size Recursive Method
+	 */
+private int getSizeRecursive(MyBinayNode<k> root){
+	return root == null ? 0 : 1 + this.getSizeRecursive(root.left) +
+        this.getSizeRecursive(root.right);//Here Finding The Size Of Binary Tree By Size Recursively
+}
+
+
+	/*
 	 * Declaring The Main Method 
 	 * Adding The Nodes To Binary Tree
 	 */
@@ -42,7 +58,20 @@ private MyBinayNode<k> addRecursively(MyBinayNode<k> root , k key) {
     myBinaryTree.add(56);//Inserting 56 Value To Binary Tree
     myBinaryTree.add(30);//Inserting 30 Value To Binary Tree
     myBinaryTree.add(70);//Inserting 70 Value To Binary Tree
+    myBinaryTree.add(40);//Inserting 40 Value To Binary Tree
+    myBinaryTree.add(22);//Inserting 22 Value To Binary Tree
+    myBinaryTree.add(60);//Inserting 60 Value To Binary Tree
+    myBinaryTree.add(95);//Inserting 95 Value To Binary Tree
+    myBinaryTree.add(11);//Inserting 11 Value To Binary Tree
+    myBinaryTree.add(65);//Inserting 65 Value To Binary Tree
+    myBinaryTree.add(03);//Inserting 03 Value To Binary Tree
+    myBinaryTree.add(16);//Inserting 16 Value To Binary Tree
+    myBinaryTree.add(63);//Inserting 63 Value To Binary Tree
+    myBinaryTree.add(67);//Inserting 67 Value To Binary Tree
     System.out.println("myBinaryTree is : "  +myBinaryTree);//Printing The My bInary Tree
+    int size = myBinaryTree.getSize();
+    System.out.println("My Binary Tree Size is : "  +size);//Printing The Size My bInary Tree
+
 	}
 }
 
